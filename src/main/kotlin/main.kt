@@ -7,8 +7,16 @@ fun main() {
     //ejercicio6()
     //ejercicio7()
     //ejercicio8()
-    ejercicio9()
+    //ejercicio9()
     //ejercicio10()
+    //ejercicio11()
+    //ejercicio12()
+    //ejercicio13()
+    //ejercicio14()
+    //ejercicio15()
+    //ejercicio16()
+    //ejercicio17()
+    ejercicio18()
 
 }
 fun ejercicio1() {
@@ -179,6 +187,129 @@ fun ejercicio10() {
         t2 = suma
     }
 }
+fun ejercicio11() {
+    println("\n11. Hacer un programa que imprima la suma de todos los números pares que hay desde 1 hasta n, y diga cuantos números hay.\n")
+    var numero: Int = 0
+    var suma: Int = 0
+    var contador: Int = 0
+
+    print("Ingrese numero: ")
+    numero = readLine()!!.toInt()
+
+    for (i in 1..numero) {
+        if (i % 2 == 0) {
+            suma += i
+            contador++
+        }
+    }
+    println("La suma es: $suma")
+    println("La cantidad de pares es: $contador")
+}
+fun ejercicio12() {
+    println("\n12. Hacer un programa que imprima la suma de todos los números impares que hay desde n hasta m, y diga cuantos números hay (Propuesto).\n")
+    var numero1: Int = 0
+    var numero2: Int = 0
+    var suma: Int = 0
+    var contador: Int = 0
+
+    print("Ingrese primer numero: ")
+    numero1 = readLine()!!.toInt()
+    print("Ingrese segundo numero: ")
+    numero2 = readLine()!!.toInt()
+
+    for (i in numero1..numero2) {
+        if (i % 2 == 1) {
+            suma += i
+            contador++
+        }
+    }
+    println("La suma es: $suma")
+    println("La cantidad de impares es: $contador")
+}
+fun ejercicio13() {
+    println("\n13. Hacer un programa que pida dos números y muestre todos los números que van desde el primero al segundo. Se debe controlar que los valores son correctos.\n")
+    var numero1: Int = 0
+    var numero2: Int = 0
+
+    print("Ingrese primer numero: ")
+    numero1 = readLine()!!.toInt()
+    print("Ingrese segundo numero: ")
+    numero2 = readLine()!!.toInt()
+
+    print("Los numeros son:")
+    for (i in numero1..numero2)
+        print(" $i")
+}
+fun ejercicio14() {
+    println("\n14. Hacer un programa que pida dos números y sume todos los números que van desde el primero al segundo. Se debe controlar que los valores son correctos. (Propuesto).\n")
+    var numero1: Int = 0
+    var numero2: Int = 0
+    var suma: Int = 0
+
+    print("Ingrese primer numero: ")
+    numero1 = readLine()!!.toInt()
+    print("Ingrese segundo numero: ")
+    numero2 = readLine()!!.toInt()
+
+    for (i in numero1..numero2) {
+        suma += i
+    }
+    println("La suma desde $numero1 hasta $numero2 es: $suma")
+}
+fun ejercicio15 () {
+    println("\n15. Hacer un programa que haga un menú del tipo “desea salir (S/N)” y el programa no termine hasta que el usuario teclee “S”.\n")
+    var letra: String =""
+    do {
+        print("Desea salir (S/N): ")
+        letra = readLine()!!
+    } while (!letra.uppercase().equals("S"))
+}
+fun ejercicio16() {
+    println("\n16. Hacer un programa que calcule la suma de los cuadrados de los 100 primeros numeros. (Propuesta)\n")
+    var suma: Int = 0
+
+    for (i in 1..100) {
+        suma += i*i
+    }
+    println("La suma es: $suma")
+}
+fun ejercicio17() {
+    println("\n17. Hacer un programa que calcule la media de números.\n")
+    var cantidadDeNumeros: Int = 0
+    var numero: Int = 0
+    var suma: Int = 0
+
+    print("Cantidad de numeros: ")
+    cantidadDeNumeros = readLine()!!.toInt()
+
+    for (i in 1..cantidadDeNumeros){
+        print("Ingrese numero $i: ")
+        numero = readLine()!!.toInt()
+        suma += numero
+    }
+    //println("La media de $cantidadDeNumeros numeros es: ${(suma/cantidadDeNumeros).toDouble()}")
+    println("La media de $cantidadDeNumeros numeros es: ${suma.toDouble()/cantidadDeNumeros.toDouble()}")
+}
+fun ejercicio18() {
+    println("\n18. Hacer un programa que calcule la media de X números, se dejarán de solicitar números hasta que se introduzca el cero. (Propuesto)\n")
+    var contador: Int = 0
+    var numero: Int = 0
+    var suma: Int = 0
+
+    do {
+        contador++
+        print("Ingrese numero $contador: ")
+        numero = readLine()!!.toInt()
+        suma += numero
+    } while (numero != 0)
+
+    println("La media de ${contador-1} numeros es: ${suma.toDouble()/(contador-1).toDouble()}")
+}
+
+
+
+
+
 
 
 
